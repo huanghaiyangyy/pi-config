@@ -1,0 +1,137 @@
+{
+  "providers": {
+    "cpa": {
+      "api": "openai-responses",
+      "apiKey": "${CPA_API_KEY}",
+      "baseUrl": "${CPA_BASE_URL}",
+      "models": [
+        {
+          "contextWindow": 262144,
+          "id": "gpt-5.6-luna",
+          "input": ["text", "image"],
+          "maxTokens": 16384,
+          "name": "gpt-5.6-luna",
+          "reasoning": true,
+          "thinkingLevelMap": {
+            "high": "high",
+            "low": "low",
+            "max": "max",
+            "medium": "medium",
+            "minimal": null,
+            "off": null,
+            "xhigh": "xhigh"
+          }
+        },
+        {
+          "contextWindow": 262144,
+          "id": "gpt-5.6-terra",
+          "input": ["text", "image"],
+          "maxTokens": 16384,
+          "name": "gpt-5.6-terra",
+          "reasoning": true,
+          "thinkingLevelMap": {
+            "high": "high",
+            "low": "low",
+            "max": "max",
+            "medium": "medium",
+            "minimal": null,
+            "off": null,
+            "xhigh": "xhigh"
+          }
+        },
+        {
+          "contextWindow": 262144,
+          "id": "gpt-5.6-sol",
+          "input": ["text", "image"],
+          "maxTokens": 16384,
+          "name": "gpt-5.6-sol",
+          "reasoning": true,
+          "thinkingLevelMap": {
+            "high": "high",
+            "low": "low",
+            "max": "max",
+            "medium": "medium",
+            "minimal": null,
+            "off": null,
+            "xhigh": "xhigh"
+          }
+        },
+        {
+          "contextWindow": 1048576,
+          "id": "gemini-3.8-flash-high",
+          "input": ["text", "image"],
+          "maxTokens": 65536,
+          "name": "gemini-3.8-flash",
+          "reasoning": true,
+          "thinkingLevelMap": {
+            "high": "high",
+            "low": "low",
+            "max": null,
+            "medium": "medium",
+            "minimal": null,
+            "off": null,
+            "xhigh": null
+          }
+        },
+        {
+          "contextWindow": 1048576,
+          "id": "gemini-3.1-pro-low",
+          "input": ["text", "image"],
+          "maxTokens": 65536,
+          "name": "gemini-3.1-pro",
+          "reasoning": true,
+          "thinkingLevelMap": {
+            "high": "high",
+            "low": "low",
+            "max": null,
+            "medium": null,
+            "minimal": null,
+            "off": null,
+            "xhigh": null
+          }
+        },
+        {
+          "contextWindow": 1048576,
+          "id": "gemini-pro-agent",
+          "input": ["text", "image"],
+          "maxTokens": 65536,
+          "name": "gemini-pro-agent",
+          "reasoning": true,
+          "thinkingLevelMap": {
+            "high": "high",
+            "low": "low",
+            "max": null,
+            "medium": null,
+            "minimal": null,
+            "off": null,
+            "xhigh": null
+          }
+        }
+      ]
+    },
+    "custom-provider": {
+      "api": "openai-responses",
+      "apiKey": "${CUSTOM_PROVIDER_API_KEY}",
+      "baseUrl": "https://api.your-provider.com/v1",
+      "models": [
+        {
+          "contextWindow": 262144,
+          "id": "model-id",
+          "input": ["text", "image"],
+          "maxTokens": 16384,
+          "name": "Model Name",
+          "reasoning": true,
+          "thinkingLevelMap": {
+            "high": "high",
+            "low": "low",
+            "max": "max",
+            "medium": "medium",
+            "minimal": null,
+            "off": null,
+            "xhigh": "xhigh"
+          }
+        }
+      ]
+    }
+  }
+}

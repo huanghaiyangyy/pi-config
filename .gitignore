@@ -1,0 +1,23 @@
+# 敏感认证与 API Key 配置（严禁提交到 Git）
+auth.json
+models.json
+*.key
+
+# 运行期历史、会话与任务记录
+sessions/
+run-history.jsonl
+missions/
+context-mode/
+web-search-cache/
+
+# 运行期动态缓存与大文件
+models-store.json
+antigravity-model-catalog.json
+
+# NPM 依赖
+node_modules/
+package-lock.json
+
+# 系统与编辑缓存
+.DS_Store
+*.log

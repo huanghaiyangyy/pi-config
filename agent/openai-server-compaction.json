@@ -1,0 +1,12 @@
+{
+  "enabled": true,
+  "includeAzure": false,
+  "additionalProviders": [
+    "cpa",
+    "pingstream"
+  ],
+  "thresholdRatio": 0.7,
+  "compactThreshold": 0,
+  "usePreviousResponseId": true,
+  "notify": true
+}

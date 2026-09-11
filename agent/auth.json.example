@@ -1,0 +1,10 @@
+{
+  "cpa": {
+    "key": "${CPA_API_KEY}",
+    "type": "api_key"
+  },
+  "custom-provider": {
+    "key": "sk-...",
+    "type": "api_key"
+  }
+}

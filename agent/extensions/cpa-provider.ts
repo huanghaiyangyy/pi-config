@@ -1,0 +1,128 @@
+import type { ExtensionAPI } from "@earendil-works/pi-coding-agent";
+
+// CPA custom provider
+// Reads from CPA_BASE_URL and CPA_API_KEY environment variables
+export default function (pi: ExtensionAPI) {
+  const baseUrl = process.env.CPA_BASE_URL || "http://localhost:8000/v1";
+  const apiKey = process.env.CPA_API_KEY || "YOUR_API_KEY";
+
+  pi.registerProvider("cpa", {
+    name: "CPA",
+    baseUrl,
+    apiKey,
+    api: "openai-responses",
+    models: [
+      {
+        id: "gpt-5.6-sol",
+        name: "GPT-5.6 Sol",
+        reasoning: true,
+        input: ["text", "image"],
+        cost: { input: 0.2, output: 1.2, cacheRead: 0.02, cacheWrite: 0.25 },
+        contextWindow: 262144,
+        maxTokens: 128000,
+        thinkingLevelMap: {
+          off: null,
+          minimal: null,
+          low: "low",
+          medium: "medium",
+          high: "high",
+          xhigh: "xhigh",
+          max: "max",
+        },
+        compat: { sessionAffinityFormat: "openai-nosession" },
+      },
+      {
+        id: "gpt-5.6-luna",
+        name: "GPT-5.6 Luna",
+        reasoning: true,
+        input: ["text", "image"],
+        cost: { input: 0.2, output: 1.2, cacheRead: 0.02, cacheWrite: 0.25 },
+        contextWindow: 262144,
+        maxTokens: 128000,
+        thinkingLevelMap: {
+          off: null,
+          minimal: null,
+          low: "low",
+          medium: "medium",
+          high: "high",
+          xhigh: "xhigh",
+          max: "max",
+        },
+        compat: { sessionAffinityFormat: "openai-nosession" },
+      },
+      {
+        id: "gpt-5.6-terra",
+        name: "GPT-5.6 Terra",
+        reasoning: true,
+        input: ["text", "image"],
+        cost: { input: 0.2, output: 1.2, cacheRead: 0.02, cacheWrite: 0.25 },
+        contextWindow: 262144,
+        maxTokens: 128000,
+        thinkingLevelMap: {
+          off: null,
+          minimal: null,
+          low: "low",
+          medium: "medium",
+          high: "high",
+          xhigh: "xhigh",
+          max: "max",
+        },
+        compat: { sessionAffinityFormat: "openai-nosession" },
+      },
+      {
+        id: "gemini-3.8-flash-high",
+        name: "Gemini 3.8 Flash",
+        reasoning: true,
+        input: ["text", "image"],
+        cost: { input: 0.1, output: 0.4, cacheRead: 0.025, cacheWrite: 0.1 },
+        contextWindow: 1048576,
+        maxTokens: 65536,
+        thinkingLevelMap: {
+          off: null,
+          minimal: null,
+          low: "low",
+          medium: "medium",
+          high: "high",
+          xhigh: null,
+          max: null,
+        },
+      },
+      {
+        id: "gemini-3.1-pro-low",
+        name: "Gemini 3.1 Pro",
+        reasoning: true,
+        input: ["text", "image"],
+        cost: { input: 1.25, output: 5, cacheRead: 0.3125, cacheWrite: 1.25 },
+        contextWindow: 1048576,
+        maxTokens: 65536,
+        thinkingLevelMap: {
+          off: null,
+          minimal: null,
+          low: "low",
+          medium: null,
+          high: "high",
+          xhigh: null,
+          max: null,
+        },
+      },
+      {
+        id: "gemini-pro-agent",
+        name: "Gemini 3.1 Pro (Agent)",
+        reasoning: true,
+        input: ["text", "image"],
+        cost: { input: 1.25, output: 5, cacheRead: 0.3125, cacheWrite: 1.25 },
+        contextWindow: 1048576,
+        maxTokens: 65536,
+        thinkingLevelMap: {
+          off: null,
+          minimal: null,
+          low: "low",
+          medium: null,
+          high: "high",
+          xhigh: null,
+          max: null,
+        },
+      },
+    ],
+  });
+}
