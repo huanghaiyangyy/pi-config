@@ -1,5 +1,5 @@
 {
-  "lastChangelogVersion": "0.84.4",
+  "lastChangelogVersion": "0.87.1",
   "theme": "catppuccin-mocha",
   "defaultProvider": "antigravity",
   "defaultModel": "gemini-3.8-flash",
@@ -22,23 +22,23 @@
     "npm:@heathhe/pi-agent-notify"
   ],
   "subagents": {
-    "defaultModel": "pingstream/gpt-5.6-luna",
+    "defaultModel": "cpa/gpt-5.6-luna",
     "defaultThinking": "medium",
     "agentOverrides": {
       "scout": {
-        "model": "pingstream/gpt-5.6-luna",
+        "model": "cpa/gpt-5.6-luna",
         "thinking": "low"
       },
       "worker": {
-        "model": "pingstream/gpt-5.6-luna",
+        "model": "cpa/gpt-5.6-luna",
         "thinking": "high"
       },
       "reviewer": {
-        "model": "pingstream/gpt-5.6-luna",
+        "model": "cpa/gpt-5.6-luna",
         "thinking": "high"
       },
       "oracle": {
-        "model": "pingstream/gpt-5.6-sol",
+        "model": "cpa/gpt-5.6-sol",
         "thinking": "high"
       }
     }

@@ -14,6 +14,7 @@ Personal configuration, plugins, themes, and extensions for [Pi Coding Agent](ht
 - **Extensions (`agent/extensions/`)**:
   - `ask-user-question.ts`: Interactive confirmation and multi-choice question tool
   - `cpa-provider.ts`: CPA provider extension (reads `CPA_BASE_URL` and `CPA_API_KEY`)
+  - `codebuddy-provider.ts`: CodeBuddy provider extension (reads `CODEBUDDY_BASE_URL` and `CODEBUDDY_API_KEY`)
 - **UI & Theme**:
   - `agent/themes/catppuccin-mocha.json`: Custom Catppuccin Mocha theme
   - `agent/open-tui.json`: Nerd font icons, status footer, telemetry metrics
